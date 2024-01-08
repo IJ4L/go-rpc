@@ -4,8 +4,6 @@ on:
   push:
     branches: [ "main" ]
 
-env:
-  AWS_DEFAULT_REGION: us-east-1
 permissions:
     id-token: write
     contents: read
@@ -24,7 +22,7 @@ jobs:
         with:
           role-to-assume: ${{ secrets.PROD_ROLE_ARN }}
           audience: sts.amazonaws.com
-          aws-region: ${{ env.AWS_DEFAULT_REGION }}
+          aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
 
       - name: Login to Amazon ECR
         id: login-ecr
