@@ -9,7 +9,6 @@ permissions:
     contents: read
 
 jobs:
-
   build:
     name: Build image
     runs-on: ubuntu-latest

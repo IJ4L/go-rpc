@@ -8,16 +8,16 @@ dropdb:
 	docker exec -it postgres-test dropdb simple_bank
 
 migrateup:
-	migrate -path db/migration -database "postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable" -verbose up
+	migrate -path db/migration -database "postgresql://root:ht%3E%21%2Aa%3FSsADeS4H7ug%7DHd~scS5Ef@simple-bank.crimymiiqkv0.ap-southeast-1.rds.amazonaws.com:5432/simple_bank" -verbose up
 
 migrateup1:
-	migrate -path db/migration -database "postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable" -verbose up 1
+	migrate -path db/migration -database "postgresql://root:ht%3E%21%2Aa%3FSsADeS4H7ug%7DHd~scS5Ef@simple-bank.crimymiiqkv0.ap-southeast-1.rds.amazonaws.com:5432/simple_bank" -verbose up 1
 
 migratedown:
-	migrate -path db/migration -database "postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable" -verbose down
+	migrate -path db/migration -database "postgresql://root:ht%3E%21%2Aa%3FSsADeS4H7ug%7DHd~scS5Ef@simple-bank.crimymiiqkv0.ap-southeast-1.rds.amazonaws.com:5432/simple_bank" -verbose down
 
 migratedown1:
-	migrate -path db/migration -database "postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable" -verbose down 1
+	migrate -path db/migration -database "postgresql://root:ht%3E%21%2Aa%3FSsADeS4H7ug%7DHd~scS5Ef@simple-bank.crimymiiqkv0.ap-southeast-1.rds.amazonaws.com:5432/simple_bank" -verbose down 1
 
 sqlc:
 	sqlc generate
