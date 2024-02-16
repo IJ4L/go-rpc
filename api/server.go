@@ -6,6 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
 	"github.com/go-playground/validator/v10"
+
 	db "simplebank.com/db/sqlgen"
 	"simplebank.com/token"
 	"simplebank.com/utils"
@@ -39,6 +40,7 @@ func (server *Server) setupRouter() {
 
 	router.POST("/users", server.createUser)
 	router.POST("/users/login", server.loginUser)
+	router.POST("/users/renew_accsess", server.renewAccsessToken)
 
 	authRoutes := router.Group("/").Use(authMiddleware(server.tokenMaker))
 
